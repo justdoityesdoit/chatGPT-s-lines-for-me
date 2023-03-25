@@ -1,0 +1,161 @@
+//belows are the lines from chatGPT for a javascript study.
+// Create an array of numbers and sum them up
+let numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+console.log("The sum of the numbers is: " + sum);
+
+// Create a nested array and display its contents
+let nestedArray = [[1, 2], [3, 4], [5, 6]];
+console.log("Contents of the nested array:");
+for (let i = 0; i < nestedArray.length; i++) {
+  for (let j = 0; j < nestedArray[i].length; j++) {
+    console.log(nestedArray[i][j]);
+  }
+}
+
+// Use a switch statement to display the name of a day of the week
+let dayOfWeek = 5;
+let dayName;
+switch (dayOfWeek) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid day of week";
+}
+console.log("The day of the week is: " + dayName);
+
+// Create a function that calculates the factorial of a number
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log("The factorial of 5 is: " + factorial(5));
+
+// Create an object representing a person and display its properties
+let person = {
+  name: "John Doe",
+  age: 35,
+  gender: "Male",
+  occupation: "Software Engineer"
+};
+console.log("The person's name is: " + person.name);
+console.log("The person's age is: " + person.age);
+console.log("The person's gender is: " + person.gender);
+console.log("The person's occupation is: " + person.occupation);
+
+// Use a try-catch block to handle an error
+try {
+  let x = y + 5;
+} catch (err) {
+  console.log("An error occurred: " + err);
+}
+
+// Create a callback function that sorts an array of numbers in descending order
+function sortDescending(arr, callback) {
+  arr.sort(function(a, b) {
+    return callback(b) - callback(a);
+  });
+}
+let nums = [5, 1, 3, 2, 4];
+sortDescending(nums, function(num) {
+  return num;
+});
+console.log("The sorted array in descending order is: " + nums);
+
+// Create a regular expression to match email addresses
+let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let email = "test@example.com";
+if (emailRegex.test(email)) {
+  console.log("The email address is valid.");
+} else {
+  console.log("The email address is invalid.");
+}
+
+
+
+
+
+
+
+//below is gpt's codes for me.
+let books = [
+  {
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    rating: 4.0
+  },
+  {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    rating: 4.5
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    rating: 3.8
+  },
+  {
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    rating: 4.2
+  },
+  {
+    title: "1984",
+    author: "George Orwell",
+    rating: 4.1
+  },
+  {
+    title: "Animal Farm",
+    author: "George Orwell",
+    rating: 3.9
+  }
+];
+
+// Display books with rating above 4.0
+console.log("Books with a rating above 4.0:");
+for (let i = 0; i < books.length; i++) {
+  if (books[i].rating > 4.0) {
+    console.log(books[i].title + " by " + books[i].author);
+  }
+}
+
+// Display books by George Orwell
+console.log("Books by George Orwell:");
+for (let i = 0; i < books.length; i++) {
+  if (books[i].author === "George Orwell") {
+    console.log(books[i].title + " (" + books[i].rating + ")");
+  }
+}
+
+// Create an array of book titles
+let bookTitles = [];
+for (let i = 0; i < books.length; i++) {
+  bookTitles.push(books[i].title);
+}
+console.log("List of book titles:");
+console.log(bookTitles);
